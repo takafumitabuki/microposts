@@ -15,13 +15,16 @@ class UsersController < ApplicationController
       redirect_to @user #ここを修正
     else
       render 'new'
+    end
   end
-end
-  
-  private
 
+  private
   
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
+
+
+
+
